@@ -1,6 +1,6 @@
 galaxy_info:
   author: elnebuloso
-  description: Server Base Configuration (Ubuntu)
+  description: Server Base Configuration
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value

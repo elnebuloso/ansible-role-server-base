@@ -1,0 +1,6 @@
+---
+- name: server_base_update_timezone
+  command: dpkg-reconfigure --frontend noninteractive tzdata
+
+- name: server_base_update_ntp
+  command: ntpdate -u ntp1.ptb.de

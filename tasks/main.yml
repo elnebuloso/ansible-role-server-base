@@ -1,0 +1,28 @@
+---
+- name: configure the aliases
+  template: src=alias.tpl dest=/root/.bash_aliases
+
+- name: configure the timezone
+  template: src=timezone.tpl dest=/etc/timezone
+  notify:
+    - server_base_update_timezone
+
+- name: generating locales
+  locale_gen: name={{item}} state=present
+  with_items: {{locales_gen}}
+
+- name: install ntp services
+  apt: pkg={{item}} state=present update_cache=yes cache_valid_time=3600
+  with_items:
+    - ntp
+    - ntpdate
+  notify:
+    - server_base_update_ntp
+
+- name: install packages
+  apt: pkg={{item}} state=present update_cache=yes cache_valid_time=3600
+  with_items:
+    - python-passlib
+    - python-pip
+    - nano
+    - htop

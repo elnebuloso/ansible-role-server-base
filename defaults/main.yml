@@ -1,0 +1,6 @@
+---
+timezone: "Europe/Berlin"
+locales_gen:
+  - de_DE
+  - de_DE@euro
+  - de_DE.UTF-8

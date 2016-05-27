@@ -1,4 +1,4 @@
-# Ansible Role - Server Base Configuration
+# Ansible Role - Linux Server Base Configuration
 
 [![Build Status](https://travis-ci.org/elnebuloso/ansible-role-server-base.svg?branch=master)](https://travis-ci.org/elnebuloso/ansible-role-server-base)
 

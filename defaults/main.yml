@@ -1,6 +1,6 @@
 ---
-timezone: "Europe/Berlin"
-locales_gen:
+server_base_timezone: "Europe/Berlin"
+server_base_locales:
   - de_DE
   - de_DE@euro
   - de_DE.UTF-8

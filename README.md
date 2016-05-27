@@ -13,11 +13,11 @@ No special requirements; note that this role requires root access, so either run
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
-    timezone: "Europe/Berlin"
+    server_base_timezone: "Europe/Berlin"
 
 The Timezone use by the Server.
 
-    locales_gen:
+    server_base_locales:
       - de_DE
       - de_DE@euro
       - de_DE.UTF-8
@@ -28,8 +28,8 @@ The Locales to generate.
 
     - hosts: localhost
       vars:
-        timezone: "Europe/Berlin"
-        locales_gen:
+        server_base_timezone: "Europe/Berlin"
+        server_base_locales:
           - de_DE
           - de_DE@euro
           - de_DE.UTF-8

@@ -1,5 +1,8 @@
 ---
+# the timezone the server is running
 server_base_timezone: "Europe/Berlin"
+
+# the locales to generate
 server_base_locales:
   - de_DE
   - de_DE@euro

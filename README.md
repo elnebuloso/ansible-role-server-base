@@ -2,16 +2,11 @@
 
 [![Build Status](https://travis-ci.org/elnebuloso/ansible-role-server-base.svg?branch=master)](https://travis-ci.org/elnebuloso/ansible-role-server-base)
 
+Setup an Ubuntu Linux Server.
+
 ## Requirements
 
-No special requirements; note that this role requires root access, so either run it in a playbook with a global `become: yes`, or invoke the role in your playbook like:
-
-```
-- hosts: localhost
-  roles:
-    - role: elnebuloso.server-base
-      become: yes
-```
+None.
 
 ## Role Variables
 
@@ -21,7 +16,7 @@ Available variables are listed below, along with default values (see `defaults/m
 server_base_timezone: "Europe/Berlin"
 ```
 
-The Timezone use by the Server.
+the timezone the server is running
 
 ```
 server_base_locales:
@@ -30,7 +25,7 @@ server_base_locales:
   - de_DE.UTF-8
 ```
 
-The Locales to generate.
+the locales to generate
 
 ## Example Playbook
 
@@ -52,4 +47,4 @@ MIT
 
 ##  Author Information
 
-This role was created in 2014 by [elnebuloso](https://github.com/elnebuloso/)
+This role was created in 2016 by [elnebuloso](https://github.com/elnebuloso/)

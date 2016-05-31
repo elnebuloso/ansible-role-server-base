@@ -28,3 +28,5 @@
     - python-passlib
     - nano
     - htop
+    - curl
+    - locate

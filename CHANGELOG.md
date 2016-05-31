@@ -1,5 +1,10 @@
 # changelog
 
+## 1.2.0
+
+- added default package curl
+- added default package locate
+
 ## 1.1.1
 
 - updated documentation

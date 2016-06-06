@@ -1,32 +1,34 @@
 ---
-- name: configure aliases
-  template: src=alias.tpl dest=/root/.bash_aliases
+- name: configure os
+  set_fact:
+    server_base_os: "{{ansible_distribution|lower}}{{ansible_distribution_major_version|int}}"
 
-- name: configure timezone
-  template: src=timezone.tpl dest=/etc/timezone
-  notify:
-    - server_base_update_timezone
+- name: include os variables
+  include_vars: "{{server_base_os}}.yml"
 
-- name: generating locales
-  locale_gen: name={{item}} state=present
-  with_items: "{{server_base_locales}}"
+# define os variables
 
-- name: install ntp services
-  apt: pkg={{item}} state=present update_cache=yes cache_valid_time=3600
-  with_items:
-    - ntp
-    - ntpdate
-  notify:
-    - server_base_update_ntp
+- name: define server_base_ntp_packages
+  set_fact:
+    server_base_ntp_packages: "{{__server_base_ntp_packages}}"
+  when: server_base_ntp_packages is not defined
 
-- name: install packages
-  apt: pkg={{item}} state=present update_cache=yes cache_valid_time=3600
-  with_items:
-    - apt-transport-https
-    - ca-certificates
-    - python-pip
-    - python-passlib
-    - nano
-    - htop
-    - curl
-    - locate
+- name: define server_base_main_packages
+  set_fact:
+    server_base_main_packages: "{{__server_base_main_packages}}"
+  when: server_base_main_packages is not defined
+
+- name: define server_base_command_update_timezone
+  set_fact:
+    server_base_command_update_timezone: "{{__server_base_command_update_timezone}}"
+  when: server_base_command_update_timezone is not defined
+
+- name: define server_base_command_update_ntp
+  set_fact:
+    server_base_command_update_ntp: "{{__server_base_command_update_ntp}}"
+  when: server_base_command_update_ntp is not defined
+
+# setup os
+
+- name: setup {{server_base_os}}
+  include: "{{server_base_os}}.yml"

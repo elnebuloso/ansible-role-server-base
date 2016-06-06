@@ -1,5 +1,10 @@
 # changelog
 
+## 1.3.0
+
+- os specific configuration
+- ubuntu14 specific configuration
+
 ## 1.2.0
 
 - added default package curl

@@ -1,0 +1,17 @@
+---
+__server_base_ntp_packages:
+  - ntp
+  - ntpdate
+
+__server_base_main_packages:
+  - apt-transport-https
+  - ca-certificates
+  - python-pip
+  - python-passlib
+  - nano
+  - htop
+  - curl
+  - locate
+
+__server_base_command_update_timezone: "dpkg-reconfigure --frontend noninteractive tzdata"
+__server_base_command_update_ntp: "ntpdate -u ntp1.ptb.de"

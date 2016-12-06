@@ -1,5 +1,11 @@
 # changelog
 
+## 2.2.0
+
+- fixed server_base_update_ntp, missing handler
+- new config server_base_apt_upgrade
+- added aptitude for using server_base_apt_upgrade with full and safe
+
 ## 2.1.0
 
 - added default package multitail

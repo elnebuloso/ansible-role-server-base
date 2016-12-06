@@ -4,6 +4,7 @@ __server_base_ntp_packages:
   - ntpdate
 
 __server_base_main_packages:
+  - aptitude
   - apt-transport-https
   - ca-certificates
   - python-pip

@@ -1,5 +1,9 @@
 # changelog
 
+## 2.3.0
+
+- added default package systemd
+
 ## 2.2.0
 
 - fixed server_base_update_ntp, missing handler

@@ -13,6 +13,10 @@ This role requires Ansible 2.0 or higher, and platform requirements are listed i
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
 ```
+# config for updating packages on provisioning
+# values can be: dist, full, safe
+server_base_apt_upgrade: ""
+
 # the timezone the server is running
 server_base_timezone: "Europe/Berlin"
 
@@ -28,6 +32,7 @@ server_base_locales:
 ```
 - hosts: localhost
   vars:
+    server_base_apt_upgrade: "dist"
     server_base_timezone: "Europe/Berlin"
     server_base_locales:
       - de_DE

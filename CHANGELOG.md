@@ -1,5 +1,9 @@
 # changelog
 
+## 2.2.0
+
+- added default package systemd
+
 ## 2.1.0
 
 - added default package multitail

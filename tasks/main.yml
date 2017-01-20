@@ -8,25 +8,10 @@
 
 # define os variables
 
-- name: define server_base_ntp_packages
-  set_fact:
-    server_base_ntp_packages: "{{__server_base_ntp_packages}}"
-  when: server_base_ntp_packages is not defined
-
 - name: define server_base_main_packages
   set_fact:
     server_base_main_packages: "{{__server_base_main_packages}}"
   when: server_base_main_packages is not defined
-
-- name: define server_base_command_update_timezone
-  set_fact:
-    server_base_command_update_timezone: "{{__server_base_command_update_timezone}}"
-  when: server_base_command_update_timezone is not defined
-
-- name: define server_base_command_update_ntp
-  set_fact:
-    server_base_command_update_ntp: "{{__server_base_command_update_ntp}}"
-  when: server_base_command_update_ntp is not defined
 
 # setup os
 

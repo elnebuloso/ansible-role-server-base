@@ -3,9 +3,6 @@
 # values can be: dist, full, safe
 server_base_apt_upgrade: ""
 
-# the timezone the server is running
-server_base_timezone: "Europe/Berlin"
-
 # the locales to generate
 server_base_locales:
   - de_DE

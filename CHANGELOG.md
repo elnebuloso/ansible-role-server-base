@@ -1,5 +1,11 @@
 # changelog
 
+## 2.4.0
+
+- removed install of ntp
+- removed install of timezone
+- install ntp and timezone with geerlingguy.ntp
+
 ## 2.3.0
 
 - added default package systemd

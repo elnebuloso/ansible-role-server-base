@@ -17,9 +17,6 @@ Available variables are listed below, along with default values (see `defaults/m
 # values can be: dist, full, safe
 server_base_apt_upgrade: ""
 
-# the timezone the server is running
-server_base_timezone: "Europe/Berlin"
-
 # the locales to generate
 server_base_locales:
   - de_DE
@@ -33,7 +30,6 @@ server_base_locales:
 - hosts: localhost
   vars:
     server_base_apt_upgrade: "dist"
-    server_base_timezone: "Europe/Berlin"
     server_base_locales:
       - de_DE
       - de_DE@euro

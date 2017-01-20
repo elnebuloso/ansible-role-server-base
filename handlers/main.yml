@@ -1,6 +1,1 @@
 ---
-- name: server_base_update_timezone
-  command: "{{server_base_command_update_timezone}}"
-
-- name: server_base_update_ntp
-  command: "{{server_base_command_update_ntp}}"

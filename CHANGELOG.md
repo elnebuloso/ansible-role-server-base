@@ -1,5 +1,9 @@
 # changelog
 
+## 2.5.0
+
+- new config server_base_install_linux_image_extra
+
 ## 2.4.0
 
 - removed install of ntp

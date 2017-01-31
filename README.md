@@ -17,6 +17,11 @@ Available variables are listed below, along with default values (see `defaults/m
 # values can be: dist, full, safe
 server_base_apt_upgrade: ""
 
+# values can be: yes, no
+# - linux-image-extra-$(uname -r)
+# - linux-image-extra-virtual
+server_base_install_linux_image_extra: "yes"
+
 # the locales to generate
 server_base_locales:
   - de_DE

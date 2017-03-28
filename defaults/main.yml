@@ -6,7 +6,7 @@ server_base_apt_upgrade: ""
 # values can be: yes, no
 # - linux-image-extra-$(uname -r)
 # - linux-image-extra-virtual
-server_base_install_linux_image_extra: "yes"
+server_base_install_linux_image_extra: "no"
 
 # the locales to generate
 server_base_locales:

@@ -1,5 +1,9 @@
 # changelog
 
+## 2.6.0
+
+- changed default setting to server_base_install_linux_image_extra: "no"
+
 ## 2.5.0
 
 - new config server_base_install_linux_image_extra

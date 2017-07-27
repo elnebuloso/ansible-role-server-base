@@ -1,4 +1,5 @@
 ---
+__server_base_optional_packages: []
 __server_base_main_packages:
   - aptitude
   - apt-transport-https

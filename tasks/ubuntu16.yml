@@ -10,6 +10,8 @@
     upgrade: "{{server_base_apt_upgrade}}"
   when: server_base_apt_upgrade != ""
 
+################################################################################################
+
 - name: check uname for installing linux image extra
   shell: echo $(uname -r)
   register: server_base_install_linux_image_extra_uname
@@ -22,13 +24,17 @@
     - "linux-image-extra-virtual"
   when: server_base_install_linux_image_extra == "yes"
 
+################################################################################################
+
 - name: configure aliases
   template: src={{server_base_os}}/alias.tpl dest=/root/.bash_aliases
 
-- name: generating locales
-  locale_gen: name={{item}} state=present
-  with_items: "{{server_base_locales}}"
+################################################################################################
 
 - name: install main packages
   apt: pkg={{item}} state=present update_cache=yes cache_valid_time=3600
   with_items: "{{server_base_main_packages}}"
+
+- name: install optional packages
+  apt: pkg={{item}} state=present update_cache=yes cache_valid_time=3600
+  with_items: "{{server_base_optional_packages}}"

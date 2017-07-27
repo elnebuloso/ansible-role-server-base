@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [2.8.0]
+### Changed
+- removed locales, suggesting https://galaxy.ansible.com/tersmitten/locales/
+- added variable server_base_optional_packages
+
+
 ## [2.7.0]
 ### Changed
 - check server_base_os is defined

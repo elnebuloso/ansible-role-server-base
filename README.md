@@ -10,37 +10,19 @@ This role requires Ansible 2.0 or higher, and platform requirements are listed i
 
 ## Role Variables
 
-Available variables are listed below, along with default values (see `defaults/main.yml`):
+- [`defaults/main.yml`](https://github.com/elnebuloso/ansible-role-server-base/blob/master/defaults/main.yml)
+- [`vars/main.yml`](https://github.com/elnebuloso/ansible-role-server-base/blob/master/vars/main.yml)
+- [`vars/ubuntu14.yml`](https://github.com/elnebuloso/ansible-role-server-base/blob/master/vars/ubuntu14.yml)
+- [`vars/ubuntu16.yml`](https://github.com/elnebuloso/ansible-role-server-base/blob/master/vars/ubuntu16.yml)
 
-```
-# config for updating packages on provisioning
-# values can be: dist, full, safe
-server_base_apt_upgrade: ""
-
-# values can be: yes, no
-# - linux-image-extra-$(uname -r)
-# - linux-image-extra-virtual
-server_base_install_linux_image_extra: "no"
-
-# the locales to generate
-server_base_locales:
-  - de_DE
-  - de_DE@euro
-  - de_DE.UTF-8
-```
+Variables prefixed with __ (2 Underscores) are Defaults, you can overwrite them using the Variable without the __ (2 Underscores)
 
 ## Example Playbook
 
 ```
 - hosts: localhost
-  vars:
-    server_base_apt_upgrade: "dist"
-    server_base_locales:
-      - de_DE
-      - de_DE@euro
-      - de_DE.UTF-8
   roles:
-    - { role: elnebuloso.server-base }
+    - role: elnebuloso.server-base
 ```
 
 ## Dependencies

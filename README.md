@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/elnebuloso/ansible-role-server-base.svg?branch=master)](https://travis-ci.org/elnebuloso/ansible-role-server-base)
 
-Setup a Linux Server.
+Setup Essentials on an Ubuntu Server.
 
 ## Requirements
 
@@ -14,8 +14,7 @@ This role requires Ansible 2.0 or higher, and platform requirements are listed i
 - [`vars/main.yml`](https://github.com/elnebuloso/ansible-role-server-base/blob/master/vars/main.yml)
 - [`vars/ubuntu14.yml`](https://github.com/elnebuloso/ansible-role-server-base/blob/master/vars/ubuntu14.yml)
 - [`vars/ubuntu16.yml`](https://github.com/elnebuloso/ansible-role-server-base/blob/master/vars/ubuntu16.yml)
-
-Variables prefixed with __ (2 Underscores) are Defaults, you can overwrite them using the Variable without the __ (2 Underscores)
+- Variables prefixed with __ (2 Underscores) are Defaults, you can overwrite them using the Variable without the __ (2 Underscores)
 
 ## Example Playbook
 

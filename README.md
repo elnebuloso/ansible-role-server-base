@@ -1,12 +1,17 @@
-# Ansible Role - Linux Server Base Configuration
+# Ansible Role - Server Base Configuration
 
 [![Build Status](https://travis-ci.org/elnebuloso/ansible-role-server-base.svg?branch=master)](https://travis-ci.org/elnebuloso/ansible-role-server-base)
 
-Setup Essentials on an Ubuntu Server.
+Setup Server Essentials
 
 ## Requirements
 
 This role requires Ansible 2.0 or higher, and platform requirements are listed in the metadata file.
+
+## Supported Distributions
+
+- ubuntu14
+- ubuntu16
 
 ## Role Variables
 

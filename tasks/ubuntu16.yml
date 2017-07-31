@@ -5,11 +5,6 @@
     cache_valid_time: 3600
   when: server_base_apt_upgrade != ""
 
-- name: upgrade packages
-  apt:
-    upgrade: "{{server_base_apt_upgrade}}"
-  when: server_base_apt_upgrade != ""
-
 ################################################################################################
 
 - name: check uname for installing linux image extra
@@ -38,3 +33,10 @@
 - name: install optional packages
   apt: pkg={{item}} state=present update_cache=yes cache_valid_time=3600
   with_items: "{{server_base_optional_packages}}"
+
+################################################################################################
+
+- name: upgrade packages
+  apt:
+    upgrade: "{{server_base_apt_upgrade}}"
+  when: server_base_apt_upgrade != ""

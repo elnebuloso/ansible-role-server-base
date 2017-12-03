@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [3.0.0]
+### Changed
+- removed package upgrade
+- removed linux extra image
+
+
 ## [2.9.0]
 ### Changed
 - bugfix missing aptitude for upgrading packages, changed install order

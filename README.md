@@ -1,6 +1,6 @@
 # Ansible Role - Setup Server Essentials
 
-[![Build Status](https://travis-ci.org/elnebuloso/ansible-role-server-base.svg?branch=master)](https://travis-ci.org/elnebuloso/ansible-role-server-base)
+![abandoned](https://img.shields.io/badge/project-abandoned-red)
 
 Setup Server Essentials
 
